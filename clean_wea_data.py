@@ -1,14 +1,11 @@
 
 # coding: utf-8
 
-# In[1]:
 
-# %load /Users/Andy/jupyter_imports.py
 import boto3
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-#get_ipython().magic('matplotlib inline')
 
 # make plots look nice
 plt.rcParams['font.size'] = 14
@@ -19,9 +16,6 @@ plt.rcParams['lines.linewidth'] = 3
 
 import sqlite3
 con = sqlite3.connect('/Users/Andy/Projects/wunderground_data/wunderground_daily.db')
-
-
-# In[2]:
 
 
 def clean_data(dat):
@@ -64,31 +58,13 @@ def clean_data(dat):
     return dat
 
 
-# In[3]:
+# If processing stops/interupts and need to restart
+#sta_df = pd.read_csv('USAirportWeatherStations.csv')
+#sta_df.head()
+#st_list = sta_df['airportCode'].values
+#st_list
+#sta_df[sta_df.airportCode=='KUCY']
 
-sta_df = pd.read_csv('USAirportWeatherStations.csv')
-sta_df.head()
-
-
-# In[4]:
-
-st_list = sta_df['airportCode'].values
-st_list
-sta_df[sta_df.airportCode=='KUCY']
-
-
-# In[5]:
-
-st_list = st_list[1284:]
-st_list[0]
-
-
-# In[6]:
-
-st_list
-
-
-# In[ ]:
 
 
 for sta in st_list:
@@ -112,8 +88,3 @@ for sta in st_list:
         del dat
     except:
         pass
-
-
-
-
-# In[ ]:
