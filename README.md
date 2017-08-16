@@ -6,13 +6,13 @@
 
 - This is in progress; I plan to make the database publicly available for others to use when it is done.
 
-### Data gathering
+## Data gathering
 - Raw data was downloaded and put in a sqlite database w/ *wea_to_sql.py*. The raw files for each station and year were also saved to an AWS S3 bucket.
 
 
-### Cleaning
+## Cleaning
 
-- Data was then cleaned with the script *clean_wea_data.py*. Cleaned data was saved to a separate table in the sqlite database. Combined files for each station were also saved to a S3 bucket.
+- Data was then cleaned with the script *clean_wea_data.py*. Cleaned data were saved to a separate table in the sqlite database. Combined files for each station were also saved to a S3 bucket.
 
 Data meeting the following criteria were considered bad and NAN'd:
 - temp < -100 (applied to *mean_temp*, *max_temp*, and *min_temp*)
@@ -22,5 +22,7 @@ Data meeting the following criteria were considered bad and NAN'd:
 - *max_gust_mph* > 300
 - *precip_In* > 50
 
-### Access to data
-Raw and cleaned data were uploaded to a public AWS S3 bucket: 'wundergrounddaily'
+## Access to data
+- Raw and cleaned data were uploaded to a public AWS S3 bucket: 'wundergrounddaily'
+- Cleaned data are in the */cleaned* folder and named as *<station>_cleaned.csv*
+- Example: https://s3-us-west-2.amazonaws.com/wundergrounddaily/cleaned/K11R_cleaned.csv
