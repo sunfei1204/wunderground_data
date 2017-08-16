@@ -7,7 +7,7 @@
 - This is in progress; I plan to make the database publicly available for others to use when it is done.
 
 ## Data gathering
-- Raw data was downloaded and put in a sqlite database w/ *wea_to_sql.py*. The raw files for each station and year were also saved to an AWS S3 bucket.
+- Raw data was downloaded and put in a sqlite database w/ *get_daily_weather.py*. The raw files for each station and year were also saved to an AWS S3 bucket.
 
 
 ## Cleaning
