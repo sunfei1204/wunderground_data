@@ -15,12 +15,12 @@
 - Data was then cleaned with the script *clean_wea_data.py*. Cleaned data was saved to a separate table in the sqlite database. Combined files for each station were also saved to a S3 bucket.
 
 Data meeting the following criteria were considered bad and NAN'd:
-- temp < -100 (applied to mean, max, and min temps)
-- temp > 150
-- max temp < min temp
+- temp < -100 (applied to *mean_temp*, *max_temp*, and *min_temp*)
+- temp > 150 (applied to *mean_temp*, *max_temp*, and *min_temp*)
+- *max_temp* < *min temp*
 - temp = -99999 (used as bad flag in raw data??)
-- max_gust_mph > 300
-- precip_In > 50
+- *max_gust_mph* > 300
+- *precip_In* > 50
 
 ### Access to data
-Raw and cleaned data were uploaded to a public AWS S3 bucket:
+Raw and cleaned data were uploaded to a public AWS S3 bucket: 'wundergrounddaily'
