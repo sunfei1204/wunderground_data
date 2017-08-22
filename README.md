@@ -1,10 +1,8 @@
 # wunderground_data
 
-- I often find myself using wunderground data in various projects; it is very simple and easy to download yearly csv files of daily weather at any airport station.
+## Daily weather data from <https://www.wunderground.com/>, in easy-to-use format.
 
-- I decided that instead of always downloading the files, I would download them all once and put them in a sql database that can be queried from any project.
-
-- This is in progress; I plan to make the database publicly available for others to use when it is done.
+- I often find myself using historical weather data from <https://www.wunderground.com/> various projects; it is very simple and easy to download yearly csv files of daily weather at any US airport station. Instead of always downloading the files, I decided to download them all once and put them in a SQL database that can be queried from any project. I'm making the database publicly available for others to use also.
 
 ## Data gathering
 - Raw data was downloaded and put in a sqlite database w/ *get_daily_weather.py*. The raw files for each station and year were also saved to an AWS S3 bucket.
